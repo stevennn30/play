@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 邊框 -->
+    <stroke
+        android:width="@dimen/divided_line"
+        android:color="@color/fui_transparent"/>
+    <corners android:radius="10dp" />
+    <solid android:color="@color/lightRed"/>
+
+</shape>

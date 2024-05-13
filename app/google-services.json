@@ -1,0 +1,71 @@
+{
+  "project_info": {
+    "project_number": "1023854033080",
+    "firebase_url": "https://serafimplay-6adeb.firebaseio.com",
+    "project_id": "serafimplay-6adeb",
+    "storage_bucket": "serafimplay-6adeb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023854033080:android:925f17373f413c74",
+        "android_client_info": {
+          "package_name": "com.serafimtech.serafimplay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023854033080-s3oj6qjbuuj1fq5cbjd8bf283bmonas0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.serafimtech.serafimplay",
+            "certificate_hash": "4039200bdb975d69ad7f68df9bbe91106c1f78f9"
+          }
+        },
+        {
+          "client_id": "1023854033080-sdusf27pn0icde8covr80envh9epmk5p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.serafimtech.serafimplay",
+            "certificate_hash": "ea916d08ffd01752d815f9f43c9d3c45cafe0a0f"
+          }
+        },
+        {
+          "client_id": "1023854033080-vvhk6jr79dnbljs9ef2fugoecplatqsi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.serafimtech.serafimplay",
+            "certificate_hash": "6757d15211a72d2ac2d4af06f19711c3c564ce2d"
+          }
+        },
+        {
+          "client_id": "1023854033080-sk1l24162q3e340kvtl6v2qmtppq8g3q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcsNTWeQcIthqzJJeUYNK-nONRt6LoxHA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023854033080-sk1l24162q3e340kvtl6v2qmtppq8g3q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1023854033080-qj4ea3263bck1b5gbr1kauql616936ik.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.SerafimApp.SerafimApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

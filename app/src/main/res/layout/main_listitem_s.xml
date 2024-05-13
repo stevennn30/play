@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="5dp"
+    android:background="@color/lightBlack"
+    android:orientation="vertical">
+
+    <com.serafimtech.serafimplay.tool.RoundImageView
+        android:id="@+id/game_pic"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/game_name"
+        app:radius="10dp"
+        app:type="round" />
+
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/game_name"
+        app:layout_constraintHeight_percent="0.2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/msjhbd"
+        android:gravity="center"
+        android:singleLine="true"
+        android:layout_marginTop="5dp"
+        android:text="@string/text_default"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/game_pic"
+        app:layout_constraintStart_toStartOf="@id/game_pic"
+        app:layout_constraintEnd_toEndOf="@id/game_pic"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

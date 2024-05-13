@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@+id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.serafimtech.serafimplay.ui.Login"
+        tools:layout="@layout/login">
+
+        <action
+            android:id="@+id/action_login_to_choose"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/choose" />
+
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/register"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/choose"
+        android:name="com.serafimtech.serafimplay.ui.Choose"
+        tools:layout="@layout/choose">
+
+        <action
+            android:id="@+id/action_choose_to_main_drawer"
+            app:destination="@id/main_drawer"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/register"
+        android:name="com.serafimtech.serafimplay.ui.Register"
+        tools:layout="@layout/register"/>
+
+    <fragment
+        android:id="@+id/main_drawer"
+        android:name="com.serafimtech.serafimplay.ui.main_drawer"
+        tools:layout="@layout/drawer_layout">
+        <action
+            android:id="@+id/action_main_drawer_to_login"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/login"
+            app:destination="@id/login"
+            app:popUpToInclusive="true"/>
+
+        <action
+            android:id="@+id/action_main_drawer_to_notification"
+            app:destination="@id/notification"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+<!--        <action-->
+<!--            android:id="@+id/action_main_drawer_to_share"-->
+<!--            app:destination="@id/share"-->
+<!--            app:enterAnim="@anim/slide_in_right"-->
+<!--            app:exitAnim="@anim/slide_out_left"-->
+<!--            app:popEnterAnim="@anim/slide_in_left"-->
+<!--            app:popExitAnim="@anim/slide_out_right"/>-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/notification"
+        android:name="com.serafimtech.serafimplay.ui.Notification"
+        tools:layout="@layout/notification"/>
+
+<!--    <fragment-->
+<!--        android:id="@+id/share"-->
+<!--        android:name="com.serafimtech.serafimplay.ui.Share"-->
+<!--        tools:layout="@layout/share"/>-->
+</navigation>

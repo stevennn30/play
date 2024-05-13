@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+    <com.serafimtech.serafimplay.ui.tool.MovableFloatingActionButton
+        android:id="@+id/touchBt"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/b" />
+    <com.serafimtech.serafimplay.ui.tool.MovableFloatingActionButton
+        android:id="@+id/record_and_play_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/b_1" />
+    </LinearLayout>
+</merge>

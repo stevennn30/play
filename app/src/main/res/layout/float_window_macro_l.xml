@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightBlack">
+
+    <!--列表-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/macro_button"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!--分隔線-->
+
+    <ViewAnimator
+        android:id="@+id/viewAnimator2"
+        android:layout_width="@dimen/divided_line"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toEndOf="@id/macro_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!--列表-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/macro_button2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/viewAnimator2"/>
+
+    <!--分隔線-->
+
+    <ViewAnimator
+        android:id="@+id/viewAnimator4"
+        android:layout_width="@dimen/divided_line"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        android:layout_marginTop="2dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/macro_button2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!--間隔-->
+
+    <com.serafimtech.serafimplay.tool.AutoResizeTextView
+        android:id="@+id/interval"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.3"
+        android:layout_height="wrap_content"
+        android:text="@string/Interval_from_last_button"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/viewAnimator3"
+        app:layout_constraintStart_toStartOf="@id/viewAnimator4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textView"/>
+
+    <com.serafimtech.serafimplay.tool.AutoResizeTextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/viewAnimator3"
+        app:layout_constraintStart_toStartOf="@id/viewAnimator4"
+        app:layout_constraintTop_toBottomOf="@id/interval"
+        app:layout_constraintBottom_toTopOf="@id/radius_function_seekBar"/>
+
+    <SeekBar
+        android:id="@+id/radius_function_seekBar"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:max="200"
+        android:padding="10dp"
+        android:progress="500"
+        android:progressDrawable="@drawable/seeker_style_function"
+        android:thumb="@drawable/seeker_style_function_thumb"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@id/speed_plus"
+        app:layout_constraintStart_toEndOf="@id/speed_minus"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintBottom_toBottomOf="@id/viewAnimator5"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/speed_plus"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:visibility="invisible"
+        android:textColor="@color/white"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toEndOf="@+id/radius_function_seekBar"
+        app:layout_constraintTop_toTopOf="@id/radius_function_seekBar"
+        app:layout_constraintBottom_toBottomOf="@id/radius_function_seekBar"
+        app:layout_constraintEnd_toEndOf="@id/viewAnimator3"
+        android:background="@drawable/plusminus_background"/>
+
+    <Button
+        android:id="@+id/speed_minus"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:visibility="invisible"
+        android:background="@drawable/plusminus_background"
+        android:textColor="@color/white"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/radius_function_seekBar"
+        app:layout_constraintTop_toTopOf="@id/radius_function_seekBar"
+        app:layout_constraintBottom_toBottomOf="@id/radius_function_seekBar"
+        app:layout_constraintStart_toStartOf="@id/viewAnimator4"/>
+
+    <!--分隔線-->
+
+    <ViewAnimator
+        android:id="@+id/viewAnimator3"
+        android:layout_width="@dimen/divided_line"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        android:layout_marginTop="2dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@id/viewAnimator4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/viewAnimator5"/>
+
+    <!--持續時間-->
+
+    <com.serafimtech.serafimplay.tool.AutoResizeTextView
+        android:id="@+id/continued"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.3"
+        android:layout_height="wrap_content"
+        android:text="@string/Button_press_time"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/viewAnimator3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textView4"/>
+
+    <com.serafimtech.serafimplay.tool.AutoResizeTextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/viewAnimator3"
+        app:layout_constraintTop_toBottomOf="@id/continued"
+        app:layout_constraintBottom_toTopOf="@id/radius_function_seekBar2"/>
+
+    <SeekBar
+        android:id="@+id/radius_function_seekBar2"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:max="201"
+        android:min="1"
+        android:padding="10dp"
+        android:progress="500"
+        android:progressDrawable="@drawable/seeker_style_function"
+        android:thumb="@drawable/seeker_style_function_thumb"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@id/speed_plus2"
+        app:layout_constraintStart_toEndOf="@id/speed_minus2"
+        app:layout_constraintTop_toBottomOf="@id/textView4"
+        app:layout_constraintBottom_toBottomOf="@id/viewAnimator5"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/speed_plus2"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:visibility="invisible"
+        android:background="@drawable/plusminus_background"
+        android:textColor="@color/white"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toEndOf="@+id/radius_function_seekBar2"
+        app:layout_constraintTop_toTopOf="@id/radius_function_seekBar2"
+        app:layout_constraintBottom_toBottomOf="@id/radius_function_seekBar2"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/speed_minus2"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:visibility="invisible"
+        android:background="@drawable/plusminus_background"
+        android:textColor="@color/white"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/viewAnimator3"
+        app:layout_constraintTop_toTopOf="@id/radius_function_seekBar2"
+        app:layout_constraintBottom_toBottomOf="@id/radius_function_seekBar2"
+        app:layout_constraintEnd_toStartOf="@+id/radius_function_seekBar2"/>
+
+    <!--分隔線-->
+
+    <ViewAnimator
+        android:id="@+id/viewAnimator5"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divided_line"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintStart_toStartOf="@id/viewAnimator4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radius_function_seekBar2"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!--儲存返回-->
+
+    <Button
+        android:id="@+id/BACK"
+        android:tag="yes"
+        android:text="@string/cancel"
+        android:textStyle="bold"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_style_signup"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/speed_plus2"
+        app:layout_constraintStart_toEndOf="@id/speed_minus2"
+        app:layout_constraintTop_toTopOf="@id/viewAnimator5" />
+
+    <Button
+        android:id="@+id/SAVE"
+        android:tag="yes"
+        android:text="@string/save"
+        android:textStyle="bold"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_style_signup"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/speed_plus"
+        app:layout_constraintStart_toEndOf="@id/speed_minus"
+        app:layout_constraintTop_toBottomOf="@id/viewAnimator5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

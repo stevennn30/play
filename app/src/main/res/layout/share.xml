@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/lightBlack">
+
+    <ImageView
+        android:layout_margin="10dp"
+        android:id="@+id/return_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1" />
+
+    <com.serafimtech.serafimplay.tool.AutoResizeTextView
+        android:id="@+id/notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/msjhbd"
+        android:maxLines="1"
+        android:text="Share"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/return_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/return_btn" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divided_line"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/return_btn"
+        app:layout_constraintBottom_toTopOf="@id/obtain_btn"/>
+
+    <Button
+        android:layout_margin="20dp"
+        android:id="@+id/obtain_btn"
+        android:text="Obtain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/button_style_login"
+        style="?android:attr/borderlessButtonStyle"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintHeight_percent="0.075"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        app:layout_constraintBottom_toTopOf="@id/expanded_share_list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/share_btn"/>
+
+    <Button
+        android:id="@+id/share_btn"
+        android:text="Share"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/button_style_login"
+        style="?android:attr/borderlessButtonStyle"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintHeight_percent="0.075"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintTop_toTopOf="@id/obtain_btn"
+        app:layout_constraintBottom_toBottomOf="@id/obtain_btn"
+        app:layout_constraintStart_toEndOf="@id/obtain_btn"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ExpandableListView
+        android:id="@+id/expanded_share_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/obtain_btn"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

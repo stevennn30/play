@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/navigation_item_home"
+        android:title="@string/main_page" />
+
+    <item
+        android:id="@+id/featuredGame"
+        android:icon="@drawable/navigation_item_featured"
+        android:title="@string/featured" />
+
+    <item
+        android:id="@+id/ble"
+        android:icon="@drawable/navigation_item_ble"
+        android:title="@string/ble" />
+
+    <item
+        android:id="@+id/operation"
+        android:icon="@drawable/navigation_item_operation"
+        android:title="@string/operation" />
+
+    <item
+        android:id="@+id/mall"
+        android:icon="@drawable/navigation_item_mall"
+        android:title="@string/shop_mall" />
+
+</menu>

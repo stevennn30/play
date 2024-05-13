@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- app name -->
+    <string name="app_name">Serafim Play</string>
+
+    <!-- text default string -->
+    <string name="text_default">text</string>
+
+    <!-- account information -->
+    <!--供Firebase第三方登入畫面模組使用-->
+    <string name="facebook_application_id">486793785229111</string>
+    <!--供Facebook登入模組使用-->
+    <string name="facebook_app_id">486793785229111</string>
+
+    <!-- button text in app-->
+    <string name="product">Product</string>
+    <string name="log_in">로그인</string>
+    <string name="log_out">로그아웃</string>
+    <string name="register">회원가입</string>
+    <string name="email_hint">이메일</string>
+    <string name="password_hint">암호</string>
+    <string name="reconfirm_password_hint">암호를 다시 입력해주세요</string>
+    <string name="confirm">확인</string>
+    <string name="main_page">메인</string>
+    <string name="featured">특징</string>
+    <string name="ble">블루투스</string>
+    <string name="paired_device">페어링된 장치</string>
+    <string name="connect_device">미연결</string>
+    <string name="disconnect_device">연결</string>
+    <string name="operation">설명서</string>
+    <string name="shop_mall">Shop</string>
+    <string name="more">More></string>
+    <string name="moto">오토바이</string>
+    <string name="racing">레이싱</string>
+    <string name="download">다운로드</string>
+    <string name="get">완성</string>
+
+    <!-- information toast in app -->
+
+    <!-- app exit information -->
+    <string name="press_one_more">다시 누르면 종료 합니다.</string>
+
+    <!-- For ble information -->
+    <string name="ble_did_not_connect_service">Serafim의 전원을 켜세요.</string>
+    <string name="disconnected">미연결</string>
+    <string name="connecting">연결중&#8230;</string>
+    <string name="connected_success">연결 성공</string>
+    <string name="connected_fail">장치에 연결이 실패 했습니다.</string>
+
+    <!-- Mall url information -->
+    <string name="no_internet_connected">인터넷에 연결이 안됩니다.</string>
+    <string name="check_locale">위치정보를 확인중입니다&#8230;</string>
+    <string name="connect_shop">Shop 페이지와 연결중 입니다.&#8230;</string>
+    <string name="connect_shop_fail">Shop 페이지 연결에 실패했습니다.</string>
+
+    <!-- FW information -->
+    <string name="check_target_image_ver">FW버전을 체크 하고 있습니다&#8230;</string>
+    <string name="download_fw_file">FW파일을 다운로드 하고 있습니다&#8230;</string>
+
+    <!-- FWUpdate activity -->
+    <string name="new_s1_fw_version_available">New Serafim S1 controller firmware is available to download</string>
+    <string name="update_info">New firmware feature</string>
+    <string name="fw_update">업데이트</string>
+    <string name="fw_updatable">업데이트가 가능합니다.</string>
+    <string name="fw_update_not_ready">FW 업데이트가 아직 준비되지 않았습니다. 다시한번 시도하세요.</string>
+    <string name="fw_is_newest">당신의 소프트웨어 펌웨어가 업데이트 됐습니다.</string>
+    <string name="update_completed">Update completed</string>
+    <string name="update_completed_information">Please restart bluetooth and bind the S1 gamepad again, then shut down and restart SerafimPlay.</string>
+    <string name="updated_failed">Updated failed</string>
+    <string name="updated_failed_information">please make sure the gamepad isn\'t binded, and shut down and restart SerafimPlay to resume update.</string>
+    <string name="downloading_update_files">Downloading update files…</string>
+    <string name="loading_update_files">Loading update files…</string>
+    <string name="switching_controller">Switching controller to updated mode…</string>
+    <string name="searching_controller">Searching for update mode controller…</string>
+    <string name="searching_controller_decide">There is currently no controller connection. Do you want to scan the update mode controller?</string>
+
+    <!-- Profile activity -->
+    <string name="notification">공지</string>
+    <string name="fw_update_option">블루투스 FW 업데이트</string>
+    <string name="sign_out">로그아웃</string>
+    <string name="wx_share">Wechat으로 공유하기</string>
+    <string name="fb_share">Facebook으로 공유하기</string>
+    <string name="wx_share_to_friend">친구에게 공유하세요.</string>
+    <string name="wx_share_to_moment">현재를 공유하세요.</string>
+    <string name="wx_share_type">이곳으로 공유하기:</string>
+    <string name="app_version">APP 버전</string>
+
+    <!-- MainFragment -->
+    <string name="game">Game</string>
+    <string name="new_version_available">새로운 버전을 지금 다운로드 받으실 수 있습니다.</string>
+    <string name="update_to_new_version">최신 버전으로 업데이트 하세요.</string>
+    <string name="update">업데이트</string>
+    <string name="cancel">취소</string>
+
+    <!-- LogInActivity -->
+    <string name="email_login_successful">이메일을 통해 로그인에 성공했습니다.</string>
+    <string name="email_login_failed">이메일 로그인이 실패했습니다. 다시 한번 더 시도하세요.</string>
+    <string name="fb_login_successful">Facebook를 통한 로그인에 성공했습니다.</string>
+    <string name="fb_login_failed">Facebook을 통한 로그인에 실패했습니다. 다시 한번 시도하세요.</string>
+    <string name="google_login_successful">Google계정을 통한 로그인에 성공했습니다.</string>
+    <string name="google_login_failed">Google계정을 통한 로그인에 실패했습니다. 한번 더 시도하세요.</string>
+    <string name="wx_login_successful">Wechat를 통한 로그인에 성공했습니다.</string>
+    <string name="wx_login_failed">Wechat을 통한 로그인에 실패했습니다. 다시 한번 시도하세요.</string>
+    <string name="no_email_input">이메일 주소를 입력하세요.</string>
+    <string name="no_password_input">비밀번호를 입력하세요.</string>
+    <string name="password_reconfirm">비밀번호를 다시 입력하세요.</string>
+    <string name="registration_successful">회원가입에 성공했습니다.</string>
+    <string name="registration_failed">회원가입 실패했습니다. 다시한번 시도해주세요.</string>
+    <string name="reconfirm_failed">입력하신 비밀번호가 맞지 않습니다.</string>
+    <string name="please_verify_email">이메일 주소를 먼저 확인하세요.</string>
+    <string name="login">로그인&#8230;</string>
+    <string name="wx_not_installed">Wechat앱을 설치하세요.</string>
+    <string name="verification_send">e메일로 인증을 보냈으니 확인하시기 바랍니다</string>
+    <string name="verification_send_fail">e메일 인증보내기가 실패했습니다.</string>
+    <string name="access_usage_permission">Serafim Play는게임을 하기 위해서는 최초에 버튼 매핑 초기화가필요합니다. 스마트폰 설정에서 권한을 부여하세요.</string>
+    <string name="access_overlay_permission">Please allow Serafim Play to be displayed on top of other applications. This permission is used to open floating windows for play settings.</string>
+    <string name="access_location_permission">Please permit usage access of position for Serafim play, which is used for bluetooth scanning.</string>
+    <string name="access_WRITE_EXTERNAL_STORAGE">Please permit usage access of data files for Serafim play, which is used to confirm the game settings of users.</string>
+    <string name="password_length">비밀번호는 최소 6개 이상이어야 합니다.</string>
+
+    <!-- Refresh -->
+    <string name="refresh">새로 고침 하시려면 아래로 쓸어내리세요.</string>
+
+    <!--Customize coordinate-->
+    <string name="initialize">Initializing&#8230;</string>
+    <string name="loading">Loading&#8230;</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="customize">Customize</string>
+    <string name="profiles_text">Profiles</string>
+    <string name="profiles_name">Profiles name</string>
+    <string name="input_blank">Input cannot be blank</string>
+    <string name="clear">Clear</string>
+    <string name="delete">Delete</string>
+    <string name="setting">Setting&#8230;</string>
+    <string name="show_custom_overlay">Show customization overlay</string>
+    <string name="bind_to_current_q">Bind the mapping to the current application now?</string>
+    <string name="confirm_to_remove_q">Confirm to remove?</string>
+
+    <!--Customize Function-->
+    <string name="floating_window_permission">Please allow displaying floating window for Serafim Play in Permission settings</string>
+    <string name="inverted">inverted</string>
+    <string name="rotation_speed">rotation speed:&#160;</string>
+    <string name="sliding_speed">sliding speed:&#160;</string>
+    <string name="types_of_sliding">Type of sliding</string>
+    <string name="sliding_type1">Press to start sliding</string>
+    <string name="sliding_type2">Release to start sliding</string>
+    <string name="sliding_type3">Hold to slide; release to stop</string>
+    <string name="types_of_stick">Type of stick</string>
+    <string name="stick_type1">Left stick</string>
+    <string name="stick_type2">Right stick</string>
+    <string name="stick_type3">Any stick</string>
+    <string name="tapping_frequency">tapping frequency:&#160;</string>
+    <string name="slowest">slowest</string>
+    <string name="slow">slow</string>
+    <string name="moderate">moderate</string>
+    <string name="fast">fast</string>
+    <string name="fastest">fastest</string>
+    <string name="macro_preset">macro preset</string>
+    <string name="stick_function_description1">Tap the screen once</string>
+    <string name="stick_function_description2">Press a target button and move left stick around the pressed button</string>
+    <string name="stick_function_description3">Press a target button and move right stick around the pressed button</string>
+    <string name="stick_function_description4">Press a target button and move chosen stick around the pressed button.</string>
+    <string name="stick_function_description5">Press a target button to trigger two positions on screen simultaneously</string>
+    <string name="stick_function_description6">Press a target button to trigger button 1, and then release the button for triggering button 2</string>
+    <string name="stick_function_description7">Press a target button and move right stick to look around</string>
+    <string name="stick_function_description8">Press a target button to slide from one end to another</string>
+    <string name="stick_function_description9">Keep tapping the screen</string>
+    <string name="stick_function_description10">Pick a button from LB, RB, LT, RT as a trigger. After doing this, keep holding the trigger you have set and then press a button you\'d like to bind</string>
+    <string name="stick_function_description11">radius:</string>
+    <string name="stick_function_description12">rotation speed:&#160;</string>
+    <string name="stick_function_description13">joystick sensitivity:&#160;</string>
+    <string name="stick_function_description14">Press a target button to trigger the selected macro</string>
+    <string name="stick_function_name1">Normal touch</string>
+    <string name="stick_function_name2">Bind LS</string>
+    <string name="stick_function_name3">Bind RS</string>
+    <string name="stick_function_name4">Bind Stick</string>
+    <string name="stick_function_name5">Dual-use</string>
+    <string name="stick_function_name6">Sequence</string>
+    <string name="stick_function_name7">Bind camera</string>
+    <string name="stick_function_name8">Sliding</string>
+    <string name="stick_function_name9">Turbo</string>
+    <string name="stick_function_name10">Key comb.</string>
+    <string name="stick_function_name11">Adjust radius</string>
+    <string name="stick_function_name12">Rotation speed</string>
+    <string name="stick_function_name13">Binding macro</string>
+    <!--Macro-->
+    <string name="macros">Macros</string>
+    <string name="save_macros">Save the recorded macros</string>
+    <string name="save">Save</string>
+    <string name="macros_setting">Macros setting</string>
+    <string name="record">Record</string>
+    <string name="play_once">Play once</string>
+    <string name="play_loop">Play in a loop</string>
+    <string name="customize_playback">Customize playback</string>
+    <string name="play_interval">Interval (sec)</string>
+    <string name="start">Start</string>
+    <string name="count">Count</string>
+    <string name="Button_press_time">Button press time(sec)</string>
+    <string name="Interval_from_last_button">Interval with last button (seconds)</string>
+    <string name="Macro_mode">Macro mode</string>
+    <string name="Record">Record</string>
+    <string name="Custom">Custom</string>
+    <string name="Reset">Reset</string>
+    <!--GameList-->
+    <string name="bind">Bind</string>
+    <string name="add">Add</string>
+    <string name="open">Open</string>
+    <string name="has_been_delete">This game has been deleted</string>
+</resources>

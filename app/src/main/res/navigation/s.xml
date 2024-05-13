@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/home">
+
+    <keep_state_fragment
+        android:id="@+id/home"
+        android:name="com.serafimtech.serafimplay.ui.Navigation_Home_S"
+        android:label="home"
+        tools:layout="@layout/navigation_shome" />
+
+    <keep_state_fragment
+        android:id="@+id/gamepage"
+        android:name="com.serafimtech.serafimplay.ui.Navigation_Gamepage"
+        android:label="gamepage"
+        tools:layout="@layout/navigation_gamepage" />
+
+    <keep_state_fragment
+        android:id="@+id/gamelist"
+        android:name="com.serafimtech.serafimplay.ui.Navigation_Gamelist"
+        android:label="gamelist"
+        tools:layout="@layout/navigation_gamelist" />
+
+    <keep_state_fragment
+        android:id="@+id/featuredGame"
+        android:name="com.serafimtech.serafimplay.ui.Navigation_FeaturedGame"
+        android:label="featuredGame"
+        tools:layout="@layout/navigation_sfeaturedgame" />
+
+    <keep_state_fragment
+        android:id="@+id/ble"
+        android:name="com.serafimtech.serafimplay.ui.Navigation_Ble"
+        android:label="ble"
+        tools:layout="@layout/navigation_ble" />
+
+    <keep_state_fragment
+        android:id="@+id/operation"
+        android:name="com.serafimtech.serafimplay.ui.Navigation_Operation_S"
+        android:label="operation"
+        tools:layout="@layout/navigation_operation_s" />
+
+    <keep_state_fragment
+        android:id="@+id/mall"
+        android:name="com.serafimtech.serafimplay.ui.Navigation_Mall"
+        android:label="mall"
+        tools:layout="@layout/navigation_mall" />
+
+</navigation>

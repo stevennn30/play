@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="transparent">#00000000</color>
+    <!--new ui color-->
+    <color name="white">#e6e6e6</color>
+    <color name="lighterRed">#EB7470</color>
+    <color name="lightGray">#4a4a4a</color>
+    <color name="lighterBlack">#292929</color>
+    <color name="lightBlack"> #1a1a1a</color>
+    <color name="optionBlack"> #222222</color>
+    <color name="transparentLightBlack">#EE1a1a1a</color>
+    <color name="deepBlack">#121212</color>
+    <color name="lightRed">#d5231e</color>
+    <color name="deepRed">#9d231e</color>
+    <color name="deeperRed">#6F1815</color>
+    <color name="barColor">#333333</color>
+    <color name="backgroundFocused">#FFFFFe</color>
+</resources>

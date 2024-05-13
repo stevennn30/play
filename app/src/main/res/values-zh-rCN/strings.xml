@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- app name -->
+    <string name="app_name">Serafim Play</string>
+
+    <!-- text default string -->
+    <string name="text_default">text</string>
+
+    <!-- account information -->
+    <!--供Firebase第三方登录畫面模組使用-->
+    <string name="facebook_application_id">486793785229111</string>
+    <!--供Facebook登录模組使用-->
+    <string name="facebook_app_id">486793785229111</string>
+
+    <!-- button text in app-->
+    <string name="product">产品</string>
+    <string name="log_in">登录</string>
+    <string name="log_out">登出</string>
+    <string name="register">注册</string>
+    <string name="email_hint">邮箱</string>
+    <string name="password_hint">密码</string>
+    <string name="reconfirm_password_hint">再次确认密码</string>
+    <string name="confirm">确定</string>
+    <string name="main_page">主页</string>
+    <string name="featured">精选</string>
+    <string name="ble">蓝牙</string>
+    <string name="paired_device">配对过的装置</string>
+    <string name="connect_device">未连线</string>
+    <string name="disconnect_device">已连线</string>
+    <string name="operation">操作</string>
+    <string name="shop_mall">商城</string>
+    <string name="more">更多></string>
+    <string name="moto">摩托车</string>
+    <string name="racing">赛车</string>
+    <string name="download">载点</string>
+    <string name="get">取得</string>
+
+    <!-- information toast in app-->
+
+    <!-- app exit information -->
+    <string name="press_one_more">再按一次退出</string>
+
+    <!-- For ble information -->
+    <string name="ble_did_not_connect_service">Serafim蓝牙装置尚未连线</string>
+    <string name="disconnected">已断线</string>
+    <string name="connecting">连线中&#8230;</string>
+    <string name="connected_success">连线成功</string>
+    <string name="connected_fail">连线失败</string>
+
+    <!-- Mall url information -->
+    <string name="no_internet_connected">未侦测到网路，请检查</string>
+    <string name="check_locale">判定位置中,请稍候&#8230;</string>
+    <string name="connect_shop">连接商城中,请稍候&#8230;</string>
+    <string name="connect_shop_fail">连接商城失败</string>
+
+    <!-- FW information -->
+    <string name="check_target_image_ver">检查韧体版本&#8230;</string>
+    <string name="download_fw_file">下载韧体资源中&#8230;</string>
+
+    <!-- FWUpdate activity -->
+    <string name="new_s1_fw_version_available">有新的Serafim S1韧体可以更新</string>
+    <string name="update_info">更新项目</string>
+    <string name="fw_update">更新</string>
+    <string name="fw_updatable">可更新</string>
+    <string name="fw_update_not_ready">韧体更新尚未就绪，请稍候再试</string>
+    <string name="fw_is_newest">韧体已是最新版本</string>
+    <string name="update_completed">更新成功</string>
+    <string name="update_completed_information">请将蓝芽关闭重启并重新绑定手把，再将SerafimPlay关闭重启</string>
+    <string name="updated_failed">更新失败</string>
+    <string name="updated_failed_information">请确认手把未绑定，并将SerafimPlay关闭重启再次进行更新</string>
+    <string name="downloading_update_files">下载更新档案中…</string>
+    <string name="loading_update_files">载入更新档案中…</string>
+    <string name="switching_controller">切换手把至更新模式…</string>
+    <string name="searching_controller">搜寻更新模式手把中…</string>
+    <string name="searching_controller_decide">当前无手把连线，是否扫描更新状态下的手把?</string>
+
+    <!-- Profile activity -->
+    <string name="notification">通知</string>
+    <string name="fw_update_option">蓝牙韧体更新</string>
+    <string name="sign_out">登出</string>
+    <string name="wx_share">微信分享</string>
+    <string name="fb_share">脸书分享</string>
+    <string name="wx_share_to_friend">分享到朋友圈</string>
+    <string name="wx_share_to_moment">分享给朋友</string>
+    <string name="wx_share_type">选择分享的方式</string>
+    <string name="app_version">程式版本</string>
+
+    <!-- MainFragment -->
+    <string name="game">游戏</string>
+    <string name="new_version_available">有新的版本可以更新</string>
+    <string name="update_to_new_version">请更新至最新版本</string>
+    <string name="update">更新</string>
+    <string name="cancel">取消</string>
+
+    <!-- LogInActivity -->
+    <string name="email_login_successful">邮箱登录成功</string>
+    <string name="email_login_failed">Email登录失败，请稍后再试</string>
+    <string name="fb_login_successful">脸书登录成功</string>
+    <string name="fb_login_failed">脸书登录失败，请稍后再试</string>
+    <string name="google_login_successful">Google登录成功</string>
+    <string name="google_login_failed">Google登录失败，请稍后再试</string>
+    <string name="wx_login_successful">微信登录成功</string>
+    <string name="wx_login_failed">微信登录失败，请稍后再试</string>
+    <string name="no_email_input">请输录邮箱</string>
+    <string name="no_password_input">请输录密码</string>
+    <string name="password_reconfirm">请再次确认密码</string>
+    <string name="registration_successful">注册成功</string>
+    <string name="registration_failed">注册失敗，请稍后再试</string>
+    <string name="reconfirm_failed">再次确认密码失败，请确认密码</string>
+    <string name="please_verify_email">请先验证你的邮箱</string>
+    <string name="login">登录中&#8230;</string>
+    <string name="wx_not_installed">请先安装微信应用程式</string>
+    <string name="verification_send">验证邮件已发送至</string>
+    <string name="verification_send_fail">无法发送验证邮件</string>
+    <string name="access_usage_permission">请允许SerafimPlay使用记录存取权限，此权限用来确认支援的游戏是否被开启，以进行游玩配置</string>
+    <string name="access_overlay_permission">请允许SerafimPlay显示于其他应用程式上方，此权限用来开启浮动视窗，以进行游玩配置</string>
+    <string name="access_location_permission">请允许SerafimPlay使用位置权限，此权限用来进行蓝芽搜索</string>
+    <string name="access_WRITE_EXTERNAL_STORAGE">请允许SerafimPlay使用档案存取权限，此权限用来存取使用者的游玩配置</string>
+    <string name="password_length">密码长度需大于6位</string>
+
+    <!-- Refresh -->
+    <string name="refresh">下拉更新</string>
+
+    <!--Customize coordinate-->
+    <string name="initialize">初始化&#8230;</string>
+    <string name="loading">载入中&#8230;</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="customize">自定义</string>
+    <string name="profiles_text">方案</string>
+    <string name="profiles_name">方案名称</string>
+    <string name="input_blank">输入不能为空白</string>
+    <string name="clear">清除</string>
+    <string name="delete">删除</string>
+    <string name="setting">设定中&#8230;</string>
+    <string name="show_custom_overlay">显示自定义视窗</string>
+    <string name="bind_to_current_q">是否绑定到此应用?</string>
+    <string name="confirm_to_remove_q">确认删除?</string>
+
+    <!--Customize Function-->
+    <string name="floating_window_permission">请先允许浮动视窗权限</string>
+    <string name="inverted">反向</string>
+    <string name="rotation_speed">视角转动速度:&#160;</string>
+    <string name="sliding_speed">滑动速度:&#160;</string>
+    <string name="types_of_sliding">滑动类型</string>
+    <string name="sliding_type1">按下开始滑动</string>
+    <string name="sliding_type2">松开开始滑动</string>
+    <string name="sliding_type3">按住滑动松开停止</string>
+    <string name="types_of_stick">摇杆类型</string>
+    <string name="stick_type1">左摇杆</string>
+    <string name="stick_type2">右摇杆</string>
+    <string name="stick_type3">任一摇杆</string>
+    <string name="tapping_frequency">连点频率:&#160;</string>
+    <string name="slowest">最慢</string>
+    <string name="slow">慢</string>
+    <string name="moderate">中</string>
+    <string name="fast">快</string>
+    <string name="fastest">最快</string>
+    <string name="macro_preset">巨集方案</string>
+    <string name="stick_function_description1">手指点击萤幕</string>
+    <string name="stick_function_description2">按下键后，可在点位周围使用左摇杆控制</string>
+    <string name="stick_function_description3">按下键后，可在点位周围使用右摇杆控制</string>
+    <string name="stick_function_description4">按下键后，可在点位周围使用选择的摇杆控制</string>
+    <string name="stick_function_description5">按下键后，触发两个位置</string>
+    <string name="stick_function_description6">按键按下松开都会点击萤幕，标记1的按键先按下，标记2的按键后按下</string>
+    <string name="stick_function_description7">按下键后，可以使用右摇杆在点位周围控制视角</string>
+    <string name="stick_function_description8">按下键后，会从标记1直线滑到标记2</string>
+    <string name="stick_function_description9">手指连点萤幕</string>
+    <string name="stick_function_description10">从LB、RB、LT、RT中选一个，当作组合键的触发按键\n设定:在此页面设定完后，按住设定的触发按键，再加上想与之绑定的按键</string>
+    <string name="stick_function_description11">半径:&#160;</string>
+    <string name="stick_function_description12">视角转动速度:&#160;</string>
+    <string name="stick_function_description13">摇杆灵敏度:&#160;</string>
+    <string name="stick_function_description14">按下键后，可以播放选择的巨集</string>
+    <string name="stick_function_name1">普通触控</string>
+    <string name="stick_function_name2">绑定左摇杆</string>
+    <string name="stick_function_name3">绑定右摇杆</string>
+    <string name="stick_function_name4">绑定摇杆</string>
+    <string name="stick_function_name5">一键两用</string>
+    <string name="stick_function_name6">弹窗功能</string>
+    <string name="stick_function_name7">绑定右视角</string>
+    <string name="stick_function_name8">滑屏功能</string>
+    <string name="stick_function_name9">连点功能</string>
+    <string name="stick_function_name10">定义组合键</string>
+    <string name="stick_function_name11">调整半径</string>
+    <string name="stick_function_name12">视角转动速度</string>
+    <string name="stick_function_name13">绑定巨集</string>
+
+    <!--Macro-->
+    <string name="macros">巨集</string>
+    <string name="save_macros">储存巨集</string>
+    <string name="save">储存</string>
+    <string name="macros_setting">巨集设定</string>
+    <string name="record">记录</string>
+    <string name="play_once">单次播放</string>
+    <string name="play_loop">循环播放</string>
+    <string name="customize_playback">自订播放</string>
+    <string name="play_interval">每次时间间隔(秒)</string>
+    <string name="start">开始</string>
+    <string name="count">次数</string>
+    <string name="Button_press_time">按钮按压时间(秒)</string>
+    <string name="Interval_from_last_button">与上个按钮间隔(秒)</string>
+    <string name="Macro_mode">巨集模式e</string>
+    <string name="Record">录制</string>
+    <string name="Custom">自定义</string>
+    <string name="Reset">设定巨集</string>
+    <!--GameList-->
+    <string name="bind">绑定</string>
+    <string name="add">加入</string>
+    <string name="open">开启</string>
+    <string name="has_been_delete">该游戏已被删除</string>
+</resources>

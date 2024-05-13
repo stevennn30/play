@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:state_checked="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/lightBlack">
+
+
+    <item>
+        <selector>
+
+            <item android:state_pressed="false">
+                <shape>
+                    <gradient
+                        android:startColor="@color/lightBlack"
+                        android:centerColor="@color/lightBlack"
+                        android:endColor="@color/lightBlack"
+                        />
+                    <stroke
+                        android:color="@color/lightBlack"
+                        android:width="@dimen/divided_line"/>
+                </shape>
+            </item>
+
+        </selector>
+    </item>
+
+
+</ripple>

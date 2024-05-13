@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/custom_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/check_bar_height"
+            android:layout_width="1px"
+            android:layout_height="1px" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:id="@+id/cancel_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:tag="cancel"
+            app:srcCompat="@drawable/button_style_float_window_cancel_image" />
+
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:layout_below="@+id/cancel_btn"
+            android:layout_alignParentStart="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:id="@+id/confirm_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_style_signup"
+                android:tag="confirm"
+                android:text="@string/confirm"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <Button
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:id="@+id/preset_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_style_signup"
+                android:tag="preset"
+                android:text="@string/profiles_text"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <Button
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:id="@+id/save_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_style_signup"
+                android:tag="save"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <Button
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:id="@+id/clear_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_style_signup"
+                android:tag="clear"
+                android:text="@string/clear"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <com.serafimtech.serafimplay.tool.AutoResizeTextView
+            android:layout_centerInParent="true"
+            android:id="@+id/preset_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/transparentLightBlack"
+            android:textSize="50sp" />
+
+    </RelativeLayout>
+
+</merge>

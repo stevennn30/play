@@ -1,0 +1,1435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parentPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightBlack">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/function_info"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="@dimen/divided_line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.5">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/function_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/view0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ordinary_touch_function"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toTopOf="@id/sliding_screen_function"
+                    app:layout_constraintEnd_toStartOf="@id/smart_stick_function"
+                    app:layout_constraintHeight_percent="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.2">
+
+                    <RadioButton
+                        android:id="@+id/ordinary_touch_radio_btn"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/radiobutton_ordinary_touch_background"
+                        android:button="@null"
+                        android:checked="true"
+                        android:tag="ordinary_touch"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.85" />
+
+                    <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/deepRed"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:tag="ordinary_touch_text"
+                        android:text="@string/stick_function_name1"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/ordinary_touch_radio_btn"
+                        app:layout_constraintStart_toStartOf="@id/ordinary_touch_radio_btn"
+                        app:layout_constraintTop_toBottomOf="@id/ordinary_touch_radio_btn" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+                <!--                    android:id="@+id/bind_left_stick_function"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="0dp"-->
+                <!--                    android:padding="5dp"-->
+                <!--                    app:layout_constraintBottom_toTopOf="@id/bind_right_view_function"-->
+                <!--                    app:layout_constraintEnd_toStartOf="@id/bind_left_stick_function"-->
+                <!--                    app:layout_constraintHeight_percent="0.5"-->
+                <!--                    app:layout_constraintStart_toEndOf="@id/ordinary_touch_function"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent"-->
+                <!--                    app:layout_constraintWidth_percent="0.2">-->
+
+                <!--                    <RadioButton-->
+                <!--                        android:id="@+id/bind_left_stick_radio_btn"-->
+                <!--                        style="?android:attr/borderlessButtonStyle"-->
+                <!--                        app:layout_constraintWidth_percent="0.85"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="0dp"-->
+                <!--                        android:background="@drawable/radiobutton_bind_left_stick_background"-->
+                <!--                        android:button="@null"-->
+                <!--                        android:tag="bind_left_stick"-->
+                <!--                        app:layout_constraintDimensionRatio="1:1"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+                <!--                    <com.example.myapplication.tool.AutoResizeTextView-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:background="@color/lightBlack"-->
+                <!--                        android:maxLines="2"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:tag="bind_left_stick_text"-->
+                <!--                        android:text="@string/stick_function_name2"-->
+                <!--                        android:textColor="@color/white"-->
+                <!--                        android:textSize="12sp"-->
+                <!--                        android:textStyle="bold"-->
+                <!--                        app:layout_constraintStart_toStartOf="@id/bind_left_stick_radio_btn"-->
+                <!--                        app:layout_constraintEnd_toEndOf="@id/bind_left_stick_radio_btn"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/bind_left_stick_radio_btn" />-->
+                <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+                <!--                    android:id="@+id/bind_right_stick_function"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="0dp"-->
+                <!--                    android:padding="5dp"-->
+                <!--                    app:layout_constraintBottom_toTopOf="@id/sliding_screen_function"-->
+                <!--                    app:layout_constraintEnd_toStartOf="@id/smart_stick_function"-->
+                <!--                    app:layout_constraintHeight_percent="0.5"-->
+                <!--                    app:layout_constraintStart_toEndOf="@id/bind_left_stick_function"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent"-->
+                <!--                    app:layout_constraintWidth_percent="0.2">-->
+
+                <!--                    <RadioButton-->
+                <!--                        android:id="@+id/bind_right_stick_radio_btn"-->
+                <!--                        style="?android:attr/borderlessButtonStyle"-->
+                <!--                        app:layout_constraintWidth_percent="0.85"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="0dp"-->
+                <!--                        android:background="@drawable/radiobutton_bind_right_stick_background"-->
+                <!--                        android:button="@null"-->
+                <!--                        android:tag="bind_right_stick"-->
+                <!--                        app:layout_constraintDimensionRatio="1:1"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+                <!--                    <com.example.myapplication.tool.AutoResizeTextView-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:background="@color/lightBlack"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:tag="bind_right_stick_text"-->
+                <!--                        android:text="@string/stick_function_name3"-->
+                <!--                        android:textColor="@color/white"-->
+                <!--                        android:textSize="12sp"-->
+                <!--                        android:textStyle="bold"-->
+                <!--                        android:maxLines="2"-->
+                <!--                        app:layout_constraintStart_toStartOf="@id/bind_right_stick_radio_btn"-->
+                <!--                        app:layout_constraintEnd_toEndOf="@id/bind_right_stick_radio_btn"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/bind_right_stick_radio_btn" />-->
+                <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/smart_stick_function"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toBottomOf="@id/ordinary_touch_function"
+                    app:layout_constraintEnd_toStartOf="@id/one_key_for_dual_function"
+                    app:layout_constraintHeight_percent="0.5"
+                    app:layout_constraintStart_toEndOf="@id/ordinary_touch_function"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.2">
+
+                    <RadioButton
+                        android:id="@+id/smart_stick_radio_btn"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/radiobutton_smart_stick_background"
+                        android:button="@null"
+                        android:tag="smart_stick"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.85" />
+
+                    <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/lightBlack"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:tag="smart_stick_text"
+                        android:text="@string/stick_function_name4"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/smart_stick_radio_btn"
+                        app:layout_constraintStart_toStartOf="@id/smart_stick_radio_btn"
+                        app:layout_constraintTop_toBottomOf="@id/smart_stick_radio_btn" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/one_key_for_dual_function"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toBottomOf="@id/ordinary_touch_function"
+                    app:layout_constraintEnd_toStartOf="@id/popup_window_function"
+                    app:layout_constraintHeight_percent="0.5"
+                    app:layout_constraintStart_toEndOf="@id/smart_stick_function"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.2">
+
+                    <RadioButton
+                        android:id="@+id/one_key_for_dual_radio_btn"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/radiobutton_one_key_for_dual_background"
+                        android:button="@null"
+                        android:tag="one_key_for_dual"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.85" />
+
+                    <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/lightBlack"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:tag="one_key_for_dual_text"
+                        android:text="@string/stick_function_name5"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/one_key_for_dual_radio_btn"
+                        app:layout_constraintStart_toStartOf="@id/one_key_for_dual_radio_btn"
+                        app:layout_constraintTop_toBottomOf="@id/one_key_for_dual_radio_btn" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/popup_window_function"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toBottomOf="@id/ordinary_touch_function"
+                    app:layout_constraintEnd_toStartOf="@id/bind_right_view_function"
+                    app:layout_constraintHeight_percent="0.5"
+                    app:layout_constraintStart_toEndOf="@id/one_key_for_dual_function"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.2">
+
+                    <RadioButton
+                        android:id="@+id/popup_window_radio_btn"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/radiobutton_popup_window_background"
+                        android:button="@null"
+                        android:tag="popup_window"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.85" />
+
+                    <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/lightBlack"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:tag="popup_window_text"
+                        android:text="@string/stick_function_name6"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/popup_window_radio_btn"
+                        app:layout_constraintStart_toStartOf="@id/popup_window_radio_btn"
+                        app:layout_constraintTop_toBottomOf="@id/popup_window_radio_btn" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bind_right_view_function"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toBottomOf="@id/ordinary_touch_function"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.5"
+                    app:layout_constraintStart_toEndOf="@id/popup_window_function"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.2">
+
+                    <RadioButton
+                        android:id="@+id/bind_right_view_radio_btn"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/radiobutton_bind_right_view_background"
+                        android:button="@null"
+                        android:tag="bind_right_view"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.85" />
+
+                    <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/lightBlack"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:tag="bind_right_view_text"
+                        android:text="@string/stick_function_name7"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/bind_right_view_radio_btn"
+                        app:layout_constraintStart_toStartOf="@id/bind_right_view_radio_btn"
+                        app:layout_constraintTop_toBottomOf="@id/bind_right_view_radio_btn" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/sliding_screen_function"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/turbo_function"
+                    app:layout_constraintHeight_percent="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ordinary_touch_function"
+                    app:layout_constraintWidth_percent="0.2">
+
+                    <RadioButton
+                        android:id="@+id/sliding_screen_radio_btn"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/radiobutton_sliding_screen_background"
+                        android:button="@null"
+                        android:tag="sliding_screen"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.85" />
+
+                    <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/lightBlack"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:tag="sliding_screen_text"
+                        android:text="@string/stick_function_name8"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/sliding_screen_radio_btn"
+                        app:layout_constraintStart_toStartOf="@id/sliding_screen_radio_btn"
+                        app:layout_constraintTop_toBottomOf="@id/sliding_screen_radio_btn" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/turbo_function"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/key_combination_function"
+                    app:layout_constraintHeight_percent="0.5"
+                    app:layout_constraintStart_toEndOf="@id/sliding_screen_function"
+                    app:layout_constraintTop_toTopOf="@id/sliding_screen_function"
+                    app:layout_constraintWidth_percent="0.2">
+
+                    <RadioButton
+                        android:id="@+id/turbo_radio_btn"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/radiobutton_turbo_background"
+                        android:button="@null"
+                        android:tag="turbo"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.85" />
+
+                    <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/lightBlack"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:tag="turbo_text"
+                        android:text="@string/stick_function_name9"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/turbo_radio_btn"
+                        app:layout_constraintStart_toStartOf="@id/turbo_radio_btn"
+                        app:layout_constraintTop_toBottomOf="@id/turbo_radio_btn" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/key_combination_function"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/macro_keys_function"
+                    app:layout_constraintHeight_percent="0.5"
+                    app:layout_constraintStart_toEndOf="@id/turbo_function"
+                    app:layout_constraintTop_toTopOf="@id/sliding_screen_function"
+                    app:layout_constraintWidth_percent="0.2">
+
+                    <RadioButton
+                        android:id="@+id/key_combination_radio_btn"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/radiobutton_key_combination_background"
+                        android:button="@null"
+                        android:tag="key_combination"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.85" />
+
+                    <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/lightBlack"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:tag="key_combination_text"
+                        android:text="@string/stick_function_name10"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/key_combination_radio_btn"
+                        app:layout_constraintStart_toStartOf="@id/key_combination_radio_btn"
+                        app:layout_constraintTop_toBottomOf="@id/key_combination_radio_btn" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/macro_keys_function"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_percent="0.5"
+                    app:layout_constraintStart_toEndOf="@id/key_combination_function"
+                    app:layout_constraintTop_toTopOf="@id/sliding_screen_function"
+                    app:layout_constraintWidth_percent="0.2">
+
+                    <RadioButton
+                        android:id="@+id/macro_keys_radio_btn"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/macro_key_background"
+                        android:button="@null"
+                        android:tag="macro_keys"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.85" />
+
+                    <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/lightBlack"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:tag="macro_keys_text"
+                        android:text="@string/stick_function_name13"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/macro_keys_radio_btn"
+                        app:layout_constraintStart_toStartOf="@id/macro_keys_radio_btn"
+                        app:layout_constraintTop_toBottomOf="@id/macro_keys_radio_btn" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view0"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divided_line"
+                android:background="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/ordinary_touch_function_constraint_layout"
+                app:layout_constraintTop_toBottomOf="@id/function_title" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ordinary_touch_function_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view0">
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/ordinary_touch_function_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/stick_function_name1"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:text="@string/stick_function_description1"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--                android:id="@+id/bind_left_stick_function_constraint_layout"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="0dp"-->
+            <!--                android:visibility="invisible"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/view0">-->
+
+            <!--                <com.example.myapplication.tool.AutoResizeTextView-->
+            <!--                    android:id="@+id/bind_left_stick_function_text"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:text="@string/stick_function_name2"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="18sp"-->
+            <!--                    android:textStyle="bold"-->
+            <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+            <!--                <com.example.myapplication.tool.AutoResizeTextView-->
+            <!--                    android:id="@+id/bind_left_stick_function_description"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginStart="5dp"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:layout_marginEnd="5dp"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:text="@string/stick_function_description2"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="14sp"-->
+            <!--                    android:textStyle="bold"-->
+            <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toBottomOf="@id/bind_left_stick_function_text" />-->
+
+            <!--                <CheckBox-->
+            <!--                    android:id="@+id/bind_left_stick_function_checkbox"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:buttonTint="@color/white"-->
+            <!--                    android:tag="bind_left_stick_check_box"-->
+            <!--                    android:text="@string/inverted"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="14sp"-->
+            <!--                    android:textStyle="bold"-->
+            <!--                    app:layout_constraintStart_toStartOf="@id/bind_left_stick_function_description"-->
+            <!--                    app:layout_constraintTop_toBottomOf="@id/bind_left_stick_function_description" />-->
+
+            <!--                <com.example.myapplication.tool.AutoResizeTextView-->
+            <!--                    android:id="@+id/bind_left_stick_function_info_text"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginStart="15dp"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:text="@string/stick_function_description11"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="14sp"-->
+            <!--                    android:textStyle="bold"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toBottomOf="@+id/bind_left_stick_function_checkbox" />-->
+
+            <!--                <com.example.myapplication.tool.AutoResizeTextView-->
+            <!--                    android:id="@+id/bind_left_stick_function_info"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="220"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="14sp"-->
+            <!--                    android:textStyle="bold"-->
+            <!--                    app:layout_constraintStart_toEndOf="@id/bind_left_stick_function_info_text"-->
+            <!--                    app:layout_constraintTop_toTopOf="@+id/bind_left_stick_function_info_text" />-->
+
+            <!--                <SeekBar-->
+            <!--                    android:id="@+id/bind_left_stick_function_seekBar"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="25dp"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:max="600"-->
+            <!--                    android:padding="10dp"-->
+            <!--                    android:progress="220"-->
+            <!--                    android:progressDrawable="@drawable/seeker_style_function"-->
+            <!--                    android:tag="bind_left_stick"-->
+            <!--                    android:thumb="@drawable/seeker_style_function_thumb"-->
+            <!--                    app:layout_constraintTop_toBottomOf="@id/bind_left_stick_function_info" />-->
+
+            <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--                android:id="@+id/bind_right_stick_function_constraint_layout"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="0dp"-->
+            <!--                android:visibility="invisible"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/view0">-->
+
+            <!--                <com.example.myapplication.tool.AutoResizeTextView-->
+            <!--                    android:id="@+id/bind_right_stick_function_text"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:text="@string/stick_function_name3"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="18sp"-->
+            <!--                    android:textStyle="bold"-->
+            <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+            <!--                <com.example.myapplication.tool.AutoResizeTextView-->
+            <!--                    android:id="@+id/bind_right_stick_function_description"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="0dp"-->
+            <!--                    android:layout_marginStart="5dp"-->
+            <!--                    android:layout_marginEnd="5dp"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:text="@string/stick_function_description3"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="14sp"-->
+            <!--                    android:textStyle="bold"-->
+            <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toBottomOf="@id/bind_right_stick_function_text" />-->
+
+            <!--                <CheckBox-->
+            <!--                    android:id="@+id/bind_right_stick_function_checkbox"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:buttonTint="@color/white"-->
+            <!--                    android:tag="bind_right_stick_check_box"-->
+            <!--                    android:text="@string/inverted"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="14sp"-->
+            <!--                    android:textStyle="bold"-->
+            <!--                    app:layout_constraintStart_toStartOf="@id/bind_right_stick_function_description"-->
+            <!--                    app:layout_constraintTop_toBottomOf="@id/bind_right_stick_function_description" />-->
+
+            <!--                <com.example.myapplication.tool.AutoResizeTextView-->
+            <!--                    android:id="@+id/bind_right_stick_function_info_title"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginStart="15dp"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:text="@string/stick_function_description11"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="14sp"-->
+            <!--                    android:textStyle="bold"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toBottomOf="@+id/bind_right_stick_function_checkbox" />-->
+
+            <!--                <com.example.myapplication.tool.AutoResizeTextView-->
+            <!--                    android:id="@+id/bind_right_stick_function_info"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="220"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="14sp"-->
+            <!--                    android:textStyle="bold"-->
+            <!--                    app:layout_constraintStart_toEndOf="@id/bind_right_stick_function_info_title"-->
+            <!--                    app:layout_constraintTop_toTopOf="@+id/bind_right_stick_function_info_title" />-->
+
+            <!--                <SeekBar-->
+            <!--                    android:id="@+id/bind_right_stick_function_seekBar"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="25dp"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:max="600"-->
+            <!--                    android:padding="10dp"-->
+            <!--                    android:progress="220"-->
+            <!--                    android:progressDrawable="@drawable/seeker_style_function"-->
+            <!--                    android:tag="bind_right_stick"-->
+            <!--                    android:thumb="@drawable/seeker_style_function_thumb"-->
+            <!--                    app:layout_constraintTop_toBottomOf="@id/bind_right_stick_function_info" />-->
+            <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/smart_stick_function_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view0">
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/smart_stick_function_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/stick_function_name4"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/smart_stick_function_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:text="@string/stick_function_description4"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/smart_stick_function_text" />
+
+                <CheckBox
+                    android:id="@+id/smart_stick_function_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/white"
+                    android:tag="smart_stick_check_box"
+                    android:text="@string/inverted"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/smart_stick_function_info_title"
+                    app:layout_constraintStart_toStartOf="@id/smart_stick_function_description"
+                    app:layout_constraintTop_toBottomOf="@id/smart_stick_function_description" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/smart_stick_function_info_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/stick_function_description11"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/smart_stick_function_checkbox"
+                    app:layout_constraintTop_toBottomOf="@+id/smart_stick_function_checkbox" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/smart_stick_function_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="220"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/smart_stick_function_info_title"
+                    app:layout_constraintTop_toTopOf="@+id/smart_stick_function_info_title" />
+
+                <SeekBar
+                    android:id="@+id/smart_stick_function_seekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:max="600"
+                    android:padding="10dp"
+                    android:progress="220"
+                    android:progressDrawable="@drawable/seeker_style_function"
+                    android:tag="smart_stick"
+                    android:thumb="@drawable/seeker_style_function_thumb"
+                    app:layout_constraintTop_toBottomOf="@id/smart_stick_function_info" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/smart_stick_function_checkbox_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/types_of_stick"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/smart_stick_function_info_title"
+                    app:layout_constraintTop_toBottomOf="@id/smart_stick_function_seekBar" />
+
+                <RadioButton
+                    android:id="@+id/smart_stick_function_radio_btn_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/white"
+                    android:checked="true"
+                    android:tag="smart_stick_radio_btn_1"
+                    android:text="@string/stick_type1"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/smart_stick_function_radio_btn_2"
+                    app:layout_constraintStart_toStartOf="@id/smart_stick_function_checkbox"
+                    app:layout_constraintTop_toBottomOf="@id/smart_stick_function_checkbox_title" />
+
+                <RadioButton
+                    android:id="@+id/smart_stick_function_radio_btn_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/white"
+                    android:tag="smart_stick_radio_btn_2"
+                    android:text="@string/stick_type2"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/smart_stick_function_radio_btn_1"
+                    app:layout_constraintEnd_toStartOf="@id/smart_stick_function_radio_btn_3"
+                    app:layout_constraintStart_toEndOf="@id/smart_stick_function_radio_btn_1"
+                    app:layout_constraintTop_toTopOf="@id/smart_stick_function_radio_btn_1" />
+
+                <RadioButton
+                    android:id="@+id/smart_stick_function_radio_btn_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/white"
+                    android:tag="smart_stick_radio_btn_3"
+                    android:text="@string/stick_type3"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/smart_stick_function_radio_btn_1"
+                    app:layout_constraintStart_toEndOf="@id/smart_stick_function_radio_btn_2"
+                    app:layout_constraintTop_toTopOf="@id/smart_stick_function_radio_btn_1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/one_key_for_dual_function_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view0">
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/one_key_for_dual_function_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/stick_function_name5"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:text="@string/stick_function_description5"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/popup_window_function_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view0">
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/popup_window_function_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/stick_function_name6"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:text="@string/stick_function_description6"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bind_right_view_function_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view0">
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/bind_right_view_function_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/stick_function_name7"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/bind_right_view_function_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:text="@string/stick_function_description7"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bind_right_view_function_text" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/bind_right_view_function_info_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/stick_function_description12"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/bind_right_view_function_description" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/bind_right_view_function_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/bind_right_view_function_info_title"
+                    app:layout_constraintTop_toTopOf="@id/bind_right_view_function_info_title" />
+
+                <SeekBar
+                    android:id="@+id/bind_right_view_function_seekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:max="5"
+                    android:padding="10dp"
+                    android:progress="1"
+                    android:progressDrawable="@drawable/seeker_style_function"
+                    android:tag="bind_right_view"
+                    android:thumb="@drawable/seeker_style_function_thumb"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bind_right_view_function_info_title" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/sliding_screen_function_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view0">
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/sliding_screen_function_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/stick_function_name8"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/sliding_screen_function_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:text="@string/stick_function_description8"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sliding_screen_function_text" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/sliding_screen_function_info_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/sliding_speed"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sliding_screen_function_description" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/sliding_screen_function_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/sliding_screen_function_info_title"
+                    app:layout_constraintTop_toTopOf="@id/sliding_screen_function_info_title" />
+
+                <SeekBar
+                    android:id="@+id/sliding_screen_function_seekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:max="12"
+                    android:padding="10dp"
+                    android:progress="1"
+                    android:progressDrawable="@drawable/seeker_style_function"
+                    android:tag="sliding_window"
+                    android:thumb="@drawable/seeker_style_function_thumb"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sliding_screen_function_info_title" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/sliding_screen_function_checkbox_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/types_of_sliding"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/sliding_screen_function_info_title"
+                    app:layout_constraintTop_toBottomOf="@id/sliding_screen_function_seekBar" />
+
+                <RadioButton
+                    android:id="@+id/sliding_screen_function_radio_btn_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/white"
+                    android:checked="true"
+                    android:tag="sliding_screen_radio_btn_1"
+                    android:text="@string/sliding_type1"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/sliding_screen_function_checkbox_title"
+                    app:layout_constraintTop_toBottomOf="@id/sliding_screen_function_checkbox_title" />
+
+                <RadioButton
+                    android:id="@+id/sliding_screen_function_radio_btn_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/white"
+                    android:tag="sliding_screen_radio_btn_2"
+                    android:text="@string/sliding_type2"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/sliding_screen_function_radio_btn_1"
+                    app:layout_constraintTop_toTopOf="@id/sliding_screen_function_radio_btn_1" />
+
+                <RadioButton
+                    android:id="@+id/sliding_screen_function_radio_btn_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/white"
+                    android:tag="sliding_screen_radio_btn_3"
+                    android:text="@string/sliding_type3"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/sliding_screen_function_radio_btn_1"
+                    app:layout_constraintTop_toBottomOf="@id/sliding_screen_function_radio_btn_1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/turbo_function_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view0">
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/turbo_function_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/stick_function_name9"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/turbo_function_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:text="@string/stick_function_description9"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/turbo_function_text" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/turbo_function_info_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/tapping_frequency"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/turbo_function_description" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/turbo_function_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/moderate"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/turbo_function_info_title"
+                    app:layout_constraintTop_toTopOf="@id/turbo_function_info_title" />
+
+                <SeekBar
+                    android:id="@+id/turbo_function_seekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:max="4"
+                    android:padding="10dp"
+                    android:progress="2"
+                    android:progressDrawable="@drawable/seeker_style_function"
+                    android:tag="turbo"
+                    android:thumb="@drawable/seeker_style_function_thumb"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/turbo_function_info" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/key_combination_function_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view0">
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/key_combination_function_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/stick_function_name10"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="@string/stick_function_description10"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/macro_keys_function_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view0">
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:id="@+id/macro_keys_function_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/stick_function_name13"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/macro_keys_function_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="@string/stick_function_description14"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/macro_keys_function_info"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/macro_keys_function_text"/>
+                <com.serafimtech.serafimplay.tool.AutoResizeTextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/macro_keys_function_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/macro_preset"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/spinner_view"
+                    app:layout_constraintStart_toStartOf="@id/spinner_view"
+                    app:layout_constraintTop_toBottomOf="@id/macro_keys_function_description"/>
+
+                <LinearLayout
+                    android:id="@+id/spinner_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/editview_style_round"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/macro_keys_function_info"
+                    app:layout_constraintWidth_percent="0.75">
+
+                    <Spinner
+                        android:id="@+id/macro_keys_preset_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="@dimen/divided_line"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_constraintStart_toEndOf="@id/function_info" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/function_gif_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="@dimen/divided_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view1"
+            app:layout_constraintWidth_percent="0.5">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/function_gif"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:src="@drawable/gif11"
+                app:layout_constraintBottom_toTopOf="@id/view2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.8"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divided_line"
+                android:background="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/btn_layout"
+                app:layout_constraintTop_toBottomOf="@id/function_gif" />
+
+            <LinearLayout
+                android:id="@+id/btn_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view2">
+
+                <Button
+                    android:id="@+id/confirm_btn"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_style_signup"
+                    android:tag="confirm"
+                    android:text="@string/confirm"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/cancel_btn"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_style_signup"
+                    android:tag="cancel"
+                    android:text="@string/cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</merge>

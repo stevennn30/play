@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/operation_s"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/option_s_1">
+
+    <fragment
+        android:id="@+id/option_s_1"
+        tools:layout="@layout/option_s_1"
+        android:name="com.serafimtech.serafimplay.ui.Option_S_1">
+        <action
+            android:id="@+id/action_option_s_1_to_option_s_2"
+            app:destination="@id/option_s_2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/option_s_2"
+        tools:layout="@layout/option_s_2"
+        android:name="com.serafimtech.serafimplay.ui.Option_S_2"/>
+</navigation>
