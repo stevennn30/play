@@ -24,11 +24,16 @@ import static com.serafimtech.serafimplay.App.getApp;
 public class DataReadAndWrite {
     private static final String TAG = DataReadAndWrite.class.getSimpleName();
 
+    //寫入app內部存儲
     public static void WriteFile(String strContent, String dirName, String fileName) {
         FileOutputStream fos = null;
         try {
+            // 獲取應用內部存儲中的目錄
             File directory = getApp().getDir(dirName, Context.MODE_PRIVATE);
+            // 在該目錄中創建一個表示文件的 File 對象
             File mypath = new File(directory, fileName);
+
+            // 創建 FileOutputStream 將數據寫入該文件
             fos = new FileOutputStream(mypath);
             // Use the compress method on the BitMap object to write image to the OutputStream
             fos.write(strContent.getBytes());
@@ -36,7 +41,10 @@ public class DataReadAndWrite {
             e.printStackTrace();
         } finally {
             try {
-                fos.close();
+                // 關閉 FileOutputStream 以釋放系統資源
+                if (fos != null) {
+                    fos.close();
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -163,24 +171,30 @@ public class DataReadAndWrite {
         }
     }
 
-    public void WriteFile2(String strContent, String dirName, String fileName) {
-        FileOutputStream fos = null;
-        try {
-            File root = android.os.Environment.getExternalStorageDirectory();
-            File dir = new File(root.getAbsolutePath() + "/" + dirName);
-            dir.mkdirs();
-            File mypath = new File(root, fileName);
-            fos = new FileOutputStream(mypath);
-            // Use the compress method on the BitMap object to write image to the OutputStream
-            fos.write(strContent.getBytes());
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                fos.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
+    //寫入外部存儲
+//    public void WriteFile2(String strContent, String dirName, String fileName) {
+//        FileOutputStream fos = null;
+//        try {
+//            File root = android.os.Environment.getExternalStorageDirectory();
+//            File dir = new File(root.getAbsolutePath() + "/" + dirName);
+//            dir.mkdirs();
+//            File mypath = new File(root, fileName);
+//
+//
+//            fos = new FileOutputStream(mypath);
+//            // Use the compress method on the BitMap object to write image to the OutputStream
+//            fos.write(strContent.getBytes());
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        } finally {
+//            try {
+//                // 關閉 FileOutputStream 以釋放系統資源
+//                if (fos != null) {
+//                    fos.close();
+//                }
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
 }

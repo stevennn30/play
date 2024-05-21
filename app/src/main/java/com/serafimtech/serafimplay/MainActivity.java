@@ -129,6 +129,7 @@ public class MainActivity extends FragmentActivity {
 
     @Override
     protected void onResume() {
+        Log.d(TAG,"onResume");
         super.onResume();
         FullScreen();
         if (!rpManager.isGotUsageStatsPermission()) {
@@ -528,6 +529,7 @@ public class MainActivity extends FragmentActivity {
 
     void startStickAutoConnectTimer() {
         if (sTimer == null) {
+
             BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
             if (mBluetoothAdapter != null && mBluetoothAdapter.isEnabled() && mStickService.mConnectionState == STATE_DISCONNECTED) {
                 sTimer = new Timer();
@@ -559,6 +561,7 @@ public class MainActivity extends FragmentActivity {
 
     void startRacingAutoConnectTimer() {
         if (rTimer == null) {
+
             BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
             if (mBluetoothAdapter != null && mBluetoothAdapter.isEnabled() && mRacingService.mConnectionState == STATE_DISCONNECTED) {
                 rTimer = new Timer();

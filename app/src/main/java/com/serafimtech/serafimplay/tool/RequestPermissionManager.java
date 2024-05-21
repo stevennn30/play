@@ -38,6 +38,7 @@ public class RequestPermissionManager {
     }
 
     public boolean isGotReadAndWritePermission() {
+        Log.d("DEBUG", String.valueOf(ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED));
         return ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
     }
 
@@ -81,6 +82,7 @@ public class RequestPermissionManager {
     }
 
     public boolean isGotAccessCoarseLocationPermission() {
+        //Log.d("DEBUG", String.valueOf(ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED));
         return ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED;
     }
     public boolean isGotQUERYALLPACKAGESPermission(){
