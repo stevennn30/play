@@ -160,10 +160,15 @@ public class DataReadAndWrite {
     }
 
     public static void deleteRecursive(File fileOrDirectory) {
-
         if (fileOrDirectory.isDirectory()) {
-            for (File child : fileOrDirectory.listFiles()) {
-                deleteRecursive(child);
+            File[] files = fileOrDirectory.listFiles();
+            if (files != null) { // Check if listFiles() returns null
+                for (File child : files) {
+                    deleteRecursive(child);
+                }
+            } else {
+                // Handle the case where listFiles() returns null
+                Log.d(TAG, "Unable to list files in directory: " + fileOrDirectory.getAbsolutePath());
             }
         }
         while (!fileOrDirectory.delete()) {
