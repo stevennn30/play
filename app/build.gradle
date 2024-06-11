@@ -58,4 +58,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth'
     implementation platform('com.google.firebase:firebase-bom:28.0.1')
     implementation 'com.google.firebase:firebase-messaging:24.0.0'
+
+    //add for new permission request
+    //implementation 'androidx.activity:activity-ktx:1.9.0'
+    //implementation 'androidx.fragment:fragment-ktx:1.7.1'
 }

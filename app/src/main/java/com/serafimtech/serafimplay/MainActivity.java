@@ -128,6 +128,12 @@ public class MainActivity extends FragmentActivity {
     }
 
     @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        rpManager.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
+    @Override
     protected void onResume() {
         Log.d(TAG,"onResume");
         super.onResume();
@@ -137,9 +143,9 @@ public class MainActivity extends FragmentActivity {
         } else if (!rpManager.isGotOverlayPermission()) {
             alertDialog.dismiss();
             alertDialog2.show();
-        } else if (!rpManager.isGotReadAndWritePermission() || !rpManager.isGotAccessCoarseLocationPermission()) {
+        } else if (ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {//(!rpManager.isGotReadAndWritePermission() || !rpManager.isGotAccessCoarseLocationPermission()) {
             alertDialog.dismiss();
-            rpManager.getManiFestPermission();
+            rpManager.getManiFestPermission("ACCESS_COARSE_LOCATION");
         } else if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.BLUETOOTH_CONNECT}, 1);
