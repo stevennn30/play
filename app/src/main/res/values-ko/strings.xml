@@ -117,6 +117,7 @@
     <string name="access_location_permission">Please permit usage access of position for Serafim play, which is used for bluetooth scanning.</string>
     <string name="access_WRITE_EXTERNAL_STORAGE">Please permit usage access of data files for Serafim play, which is used to confirm the game settings of users.</string>
     <string name="password_length">비밀번호는 최소 6개 이상이어야 합니다.</string>
+    <string name="goToAppSetting">세라핌플레이가 위치 권한에 접근할 수 있도록 허용해주세요. 이 권한이 없으면 세라핌플레이는 블루투스에 연결할 수 없습니다.</string>
 
     <!-- Refresh -->
     <string name="refresh">새로 고침 하시려면 아래로 쓸어내리세요.</string>

@@ -144,8 +144,11 @@ public class MainActivity extends FragmentActivity {
             alertDialog.dismiss();
             alertDialog2.show();
         } else if (ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {//(!rpManager.isGotReadAndWritePermission() || !rpManager.isGotAccessCoarseLocationPermission()) {
+            Log.d(TAG, "fuck off");
             alertDialog.dismiss();
             rpManager.getManiFestPermission("ACCESS_COARSE_LOCATION");
+        } else if (ContextCompat.checkSelfPermission(this,Manifest.permission.QUERY_ALL_PACKAGES) != PackageManager.PERMISSION_GRANTED) {
+            rpManager.getManiFestPermission("QUERY_ALL_PACKAGES");
         } else if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.BLUETOOTH_CONNECT}, 1);

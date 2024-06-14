@@ -53,8 +53,8 @@ public class RequestPermissionManager {
 
     public void getUsageStatsPermission() {
         if (isGotUsageStatsPermission()) {
-            getManiFestPermission();
-            Log.d("Permission", "Usage stats permission has already gotten");
+            getManiFestPermission("ACCESS_COARSE_LOCATION");
+
         } else {
             try {
                 Intent intent = new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS, Uri.parse("package:" + context.getPackageName()));
@@ -82,14 +82,6 @@ public class RequestPermissionManager {
         }
     }
 
-    public boolean isGotAccessCoarseLocationPermission() {
-        Log.d("DEBUG", "isGotReadAndWritePermission(): " + ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION));
-        return ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED;
-    }
-    public boolean isGotQUERYALLPACKAGESPermission(){
-        return  ContextCompat.checkSelfPermission(context,Manifest.permission.QUERY_ALL_PACKAGES)==PackageManager.PERMISSION_GRANTED;
-    }
-
     public boolean isGotgetManiFestPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             Log.d("DEBUG", "SDK_INT >= Build.VERSION_CODES.S  : BLUETOOTH_SCAN");
@@ -108,8 +100,15 @@ public class RequestPermissionManager {
 //            ActivityCompat.requestPermissions((Activity) context,
 //                    new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.QUERY_ALL_PACKAGES}, GET_PERMISSION);
 //        }
-        Log.d(TAG, "getManiFestPermission()");
-        String permission = Manifest.permission.class.getField("required_permission").get(null).toString();
+        String permission = null;
+        try {
+            permission = Manifest.permission.class.getField(required_permission).get(null).toString();
+        } catch (NoSuchFieldException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+        Log.d(TAG, "getManiFestPermission()" + permission);
         if (ContextCompat.checkSelfPermission(context, permission) == PackageManager.PERMISSION_GRANTED) {
             Log.d("Permission", "Access coarse location permission has already gotten");
         } else if (ActivityCompat.shouldShowRequestPermissionRationale((Activity) context, permission)) {
@@ -126,7 +125,7 @@ public class RequestPermissionManager {
         AlertDialog alertDialog = new AlertDialog.Builder(context)
                 .setMessage(R.string.goToAppSetting)
                 .setPositiveButton(R.string.setting, (dialog, which) -> {
-                    Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS, Uri.parse("package:" + context.getPackageName()));
+                    Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + context.getPackageName()));
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                     dialog.dismiss();
@@ -134,7 +133,6 @@ public class RequestPermissionManager {
                 .setNegativeButton(R.string.cancel, (dialog, which) -> {
                     dialog.dismiss();
                 }).create();
-        alertDialog.setCanceledOnTouchOutside(false);
 
         alertDialog.show();
     }
@@ -158,12 +156,8 @@ public class RequestPermissionManager {
         }
     }
 
-    public boolean isBLEEnabled() {
-        return ((BluetoothManager) context.getSystemService(Context.BLUETOOTH_SERVICE)).getAdapter().isEnabled();
-    }
-
     public void openBLE() {
-        if (isBLEEnabled()) {
+        if (((BluetoothManager) context.getSystemService(Context.BLUETOOTH_SERVICE)).getAdapter().isEnabled()) {
             Log.d("Permission", "Bluetooth is opened");
         } else {
             context.startActivity(new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE));

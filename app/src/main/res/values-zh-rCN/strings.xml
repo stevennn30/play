@@ -133,7 +133,7 @@
     <string name="input_blank">输入不能为空白</string>
     <string name="clear">清除</string>
     <string name="delete">删除</string>
-    <string name="setting">设定中&#8230;</string>
+    <string name="setting">设定</string>
     <string name="show_custom_overlay">显示自定义视窗</string>
     <string name="bind_to_current_q">是否绑定到此应用?</string>
     <string name="confirm_to_remove_q">确认删除?</string>

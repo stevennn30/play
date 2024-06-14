@@ -117,6 +117,8 @@
     <string name="access_location_permission">Please permit usage access of position for Serafim play, which is used for bluetooth scanning.</string>
     <string name="access_WRITE_EXTERNAL_STORAGE">Please permit usage access of data files for Serafim play, which is used to confirm the game settings of users.</string>
     <string name="password_length">Password must contain at least six characters.</string>
+    <string name="goToAppSetting">Please allow SerafimPlay to access location permissions. Without this permission, SerafimPlay will not be able to connect to Bluetooth.</string>
+    <!--<string name="goToAppSetting">SerafimPlayが位置情報の許可を許可してください。この許可がないと、SerafimPlayはBluetoothに接続できません。</string> -->
 
     <!-- Refresh -->
     <string name="refresh">Swipe down to refresh.</string>

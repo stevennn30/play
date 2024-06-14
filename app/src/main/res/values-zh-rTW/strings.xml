@@ -116,7 +116,7 @@
     <string name="access_overlay_permission">請允許SerafimPlay顯示於其他應用程式上方，此權限用來開啟浮動視窗，以進行遊玩設置</string>
     <string name="access_location_permission">請允許SerafimPlay使用位置權限，此權限用來進行藍芽掃描</string>
     <string name="access_WRITE_EXTERNAL_STORAGE">請允許SerafimPlay使用檔案存取權限，此權限用來存取使用者的游玩配置</string>
-    <string name="goToAppSetting">請允許SerafimPlay使用權限，少了這些權限SerafimPlay會無法執行某些功能</string>
+    <string name="goToAppSetting">請允許SerafimPlay使用位置權限，少了該權限SerafimPlay會無法連結藍芽</string>
     <string name="password_length">密碼長度需大於6位</string>
 
     <!-- Refresh -->
@@ -133,7 +133,7 @@
     <string name="input_blank">輸入不能為空白</string>
     <string name="clear">清除</string>
     <string name="delete">刪除</string>
-    <string name="setting">設定中&#8230;</string>
+    <string name="setting">設定</string>
     <string name="show_custom_overlay">顯示自定義視窗</string>
     <string name="bind_to_current_q">是否綁定到此應用?</string>
     <string name="confirm_to_remove_q">確認刪除?</string>

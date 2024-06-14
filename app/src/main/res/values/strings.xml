@@ -115,7 +115,7 @@
     <string name="access_usage_permission">Serafim Play needs usage acess to initialize button mapping for games. You could authorize this in the phone settings.</string>
     <string name="access_overlay_permission">Please allow Serafim Play to be displayed on top of other applications. This permission is used to open floating windows for play settings.</string>
     <string name="access_location_permission">Please permit usage access of position for Serafim play, which is used for bluetooth scanning.</string>
-    <string name="goToAppSetting">Please permit usage of permissions for Serafim play, which is used to confirm the game settings of users.</string>
+    <string name="goToAppSetting">Please allow SerafimPlay to access location permissions. Without this permission, SerafimPlay will not be able to connect to Bluetooth.</string>
     <string name="access_WRITE_EXTERNAL_STORAGE">Please permit usage access of data files for Serafim play, which is used to confirm the game settings of users.</string>
     <string name="password_length">Password must contain at least six characters.</string>
 
@@ -133,7 +133,7 @@
     <string name="input_blank">Input cannot be blank</string>
     <string name="clear">Clear</string>
     <string name="delete">Delete</string>
-    <string name="setting">Setting&#8230;</string>
+    <string name="setting">Setting</string>
     <string name="show_custom_overlay">Show customization overlay</string>
     <string name="bind_to_current_q">Bind the mapping to the current application now?</string>
     <string name="confirm_to_remove_q">Confirm to remove?</string>
