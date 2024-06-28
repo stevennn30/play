@@ -3,16 +3,36 @@ apply plugin: 'com.google.gms.google-services'
 android {
     ndkVersion "22.1.7171670"
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        //sourceCompatibility JavaVersion.VERSION_1_8
+        //targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
-    compileSdkVersion 33
+
+    //APK 簽名
+    signingConfigs {
+        debug {
+            storeFile file('C:\\steven\\SerafimPlay_Android\\newSerafimplay-1.4.1\\app\\src\\main\\key\\KeyForSerafimAudio.jks')
+            storePassword '123456'
+            keyAlias 'key0'
+            keyPassword '123456'
+        }
+        release {
+            storeFile file('C:\\steven\\SerafimPlay_Android\\newSerafimplay-1.4.1\\app\\src\\main\\key\\KeyForSerafimAudio.jks')
+            storePassword '123456'
+            keyAlias 'key0'
+            keyPassword '123456'
+        }
+    }
+
+    compileSdk 33
+
     defaultConfig {
         resourceConfigurations += ['en-rUS', 'ja', 'zh-rCN', 'zh-rTW', 'ko']
         applicationId "com.serafimtech.serafimplay"
         minSdkVersion 23
         targetSdkVersion 33
-        versionCode 112
+        versionCode 120
         versionName "1.5.0"
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
@@ -24,7 +44,9 @@ android {
                 debugSymbolLevel 'SYMBOL_TABLE'
             }
             buildConfigField "boolean", "LOG_DEBUG", "false"
+
             minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
@@ -58,7 +80,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth'
     implementation platform('com.google.firebase:firebase-bom:28.0.1')
     implementation 'com.google.firebase:firebase-messaging:24.0.0'
-
+    //Play Integrity API
+    implementation 'com.google.android.play:integrity:1.3.0'
     //add for new permission request
     //implementation 'androidx.activity:activity-ktx:1.9.0'
     //implementation 'androidx.fragment:fragment-ktx:1.7.1'
